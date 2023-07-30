@@ -3,3 +3,4 @@
 export(senamhinfo)
 export(senamhiws)
 export(stations)
+import(rvest)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/stations.R
 \name{stations}
 \alias{stations}
-\title{function for processing of pisco daily values to a monthly average.}
+\title{function for get}
 \usage{
 stations()
 }

@@ -2,19 +2,12 @@
 % Please edit documentation in R/senamhinfo.R
 \name{senamhinfo}
 \alias{senamhinfo}
-\title{function for processing of pisco daily values to a monthly average.}
+\title{function for get information about stations.}
 \usage{
 senamhinfo()
 }
-\arguments{
-\item{x}{a dataframe with PISCO daily values.}
-
-\item{param}{OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
-use mean for temperature.}
-}
 \description{
-function for processing of pisco daily values to a monthly average, apply to precipitation,
-temperature and evapotranspiration.
+function for get information (coordinates, station code and height) about stations.
 }
 \author{
 Geomar Perales Apaico
