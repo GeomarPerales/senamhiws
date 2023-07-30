@@ -6,6 +6,10 @@
 #'
 #' @export
 #'
+#' @examples
+#'
+#' stations()
+#
 #' @author Geomar Perales Apaico
 #'
 #' @name stations

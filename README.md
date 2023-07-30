@@ -1,7 +1,7 @@
 # **senamhiws**
 
-senamhiws is a web scraping package from SENAMHI (Peru) wih R, the purpose of senamhiws
-is get record and details of SENAMHI stations.
+senamhiws is a web scraping package from SENAMHI (Peru) wih R, the purpose of
+senamhiws is get record and details of SENAMHI stations.
 
 ## **Installation**
 
