@@ -1,14 +1,11 @@
-# senamhiws
+# **senamhiws**
 
-<!-- badges: start -->
+senamhiws is a web scraping package from SENAMHI (Peru) wih R, the purpose of senamhiws
+is get record and details of SENAMHI stations.
 
-<!-- badges: end -->
+## **Installation**
 
-The goal of senamhiws is to ...
-
-## Installation
-
-You can install the released version of senamhiws from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of senamhiws from Github with:
 
 ``` r
 library(devtools)
@@ -20,6 +17,5 @@ install_github("GeomarPerales/senamhiws")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(senamhiws)
-## basic example code
+stations <- stations()
 ```
