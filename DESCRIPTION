@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Geomar Perales Apaico
 Maintainer: Geomar Perales Apaico <perales.geomar@gmail.com>
 Description: senamhiws is a web scraping package from SENAMHI (Peru) wih R, 
- the purpose of senamhiws is obtain record and details of SENAMHI stations.
+ the purpose of senamhiws is get record and details of SENAMHI stations.
 License: GPL
 Encoding: UTF-8
 LazyData: true
