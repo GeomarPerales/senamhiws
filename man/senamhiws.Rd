@@ -12,7 +12,8 @@ senamhiws(x, stations)
 \item{stations}{data of SENAMHI web scraping}
 }
 \description{
-function for get record of SENAMHI stations from 01-01-2016 to 31-12-2022.
+function for get record of SENAMHI stations from 01-01-2016 to 31-12-2022 and
+save data files and save dataset files in work directory.
 }
 \examples{
 
