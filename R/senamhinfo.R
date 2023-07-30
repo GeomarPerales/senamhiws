@@ -8,6 +8,13 @@
 #'
 #' @export
 #'
+#' @examples
+#'
+#' x <- c("114123", "114030")
+#' stations <- stations()
+#'
+#' senamhinfo(x, stations)
+#'
 #' @author Geomar Perales Apaico
 #'
 #' @name senamhinfo

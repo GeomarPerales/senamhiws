@@ -14,6 +14,14 @@ senamhinfo(x, stations)
 \description{
 function for get information (coordinates, station code and altitude) about stations.
 }
+\examples{
+
+x <- c("114123", "114030")
+stations <- stations()
+
+senamhinfo(x, stations)
+
+}
 \author{
 Geomar Perales Apaico
 }

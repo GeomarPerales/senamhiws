@@ -9,6 +9,10 @@ stations()
 \description{
 function for get all stations information (coordinates and altitude) of SENAMHI web scraping.
 }
+\examples{
+
+stations <- stations()
+}
 \author{
 Geomar Perales Apaico
 }

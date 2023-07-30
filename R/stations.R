@@ -8,7 +8,7 @@
 #'
 #' @examples
 #'
-#' stations()
+#' stations <- stations()
 #
 #' @author Geomar Perales Apaico
 #'

@@ -14,6 +14,13 @@ senamhiws(x, stations)
 \description{
 function for get record of SENAMHI stations from 01-01-2016 to 31-12-2022.
 }
+\examples{
+
+x <- c("114123", "114030")
+stations <- stations()
+senamhiws(x, stations)
+
+}
 \author{
 Geomar Perales Apaico
 }
