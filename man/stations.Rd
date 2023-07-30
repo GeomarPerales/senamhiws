@@ -2,19 +2,12 @@
 % Please edit documentation in R/stations.R
 \name{stations}
 \alias{stations}
-\title{function for get}
+\title{function for get all stations information of SENAMHI web scraping}
 \usage{
 stations()
 }
-\arguments{
-\item{x}{a dataframe with PISCO daily values.}
-
-\item{param}{OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
-use mean for temperature.}
-}
 \description{
-function for processing of pisco daily values to a monthly average, apply to precipitation,
-temperature and evapotranspiration.
+function for get all stations information (coordinates and altitude) of SENAMHI web scraping.
 }
 \author{
 Geomar Perales Apaico

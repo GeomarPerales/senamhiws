@@ -1,7 +1,7 @@
 #' function for get stations information of SENAMHI.
 #'
 #' function for get information (coordinates, station code and altitude) about stations.
-#' @param x a vector from stations code
+#' @param x a vector from SENAMHI stations code
 #' @param stations data of SENAMHI web scraping
 #'
 #' @import rvest

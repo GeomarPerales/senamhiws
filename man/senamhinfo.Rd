@@ -2,12 +2,17 @@
 % Please edit documentation in R/senamhinfo.R
 \name{senamhinfo}
 \alias{senamhinfo}
-\title{function for get information about stations.}
+\title{function for get stations information of SENAMHI.}
 \usage{
-senamhinfo()
+senamhinfo(x, stations)
+}
+\arguments{
+\item{x}{a vector from SENAMHI stations code}
+
+\item{stations}{data of SENAMHI web scraping}
 }
 \description{
-function for get information (coordinates, station code and height) about stations.
+function for get information (coordinates, station code and altitude) about stations.
 }
 \author{
 Geomar Perales Apaico

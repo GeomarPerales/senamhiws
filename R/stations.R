@@ -2,7 +2,9 @@
 #'
 #' function for get all stations information (coordinates and altitude) of SENAMHI web scraping.
 #'
-#'@export
+#' @import rvest
+#'
+#' @export
 #'
 #' @author Geomar Perales Apaico
 #'

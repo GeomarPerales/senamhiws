@@ -2,19 +2,17 @@
 % Please edit documentation in R/senamhiws.R
 \name{senamhiws}
 \alias{senamhiws}
-\title{function for processing of pisco daily values to a monthly average.}
+\title{function for get record of SENAMHI stations}
 \usage{
-senamhiws()
+senamhiws(x, stations)
 }
 \arguments{
-\item{x}{a dataframe with PISCO daily values.}
+\item{x}{a vector from SENAMHI stations code}
 
-\item{param}{OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
-use mean for temperature.}
+\item{stations}{data of SENAMHI web scraping}
 }
 \description{
-function for processing of pisco daily values to a monthly average, apply to precipitation,
-temperature and evapotranspiration.
+function for get record of SENAMHI stations from 01-01-2016 to 31-12-2022.
 }
 \author{
 Geomar Perales Apaico

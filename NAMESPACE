@@ -3,4 +3,5 @@
 export(senamhinfo)
 export(senamhiws)
 export(stations)
+import(openxlsx)
 import(rvest)
