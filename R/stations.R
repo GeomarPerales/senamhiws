@@ -10,7 +10,7 @@
 #'
 #' @author Geomar Perales Apaico
 #'
-#' @name monthlyavg
+#' @name stations
 
 
 stations <- function() {
