@@ -4,7 +4,7 @@
 #' save data files and save dataset files in work directory.
 #'
 #' @param x a vector from SENAMHI stations code
-#' @param stations data of SENAMHI web scraping
+#' @param stations stations information of SENAMHI web scraping
 #'
 #' @import rvest
 #' @import openxlsx
@@ -36,7 +36,7 @@ senamhiws <- function(x, stations) {
     idx.cod <- grep(as.character(cod_stn[[i]]), stations$cod)
     df_idx_stn <- data.frame(stations[idx.cod,], stringsAsFactors = FALSE)
     from <- c(2016, 01, 01)
-    to <- c(2022, 12, 31)
+    to <- c(2023, 12, 31)
     ts_date <- seq.Date(as.Date(paste0(from[1], "-",from[2], "-", from[3])),
                         as.Date(paste0(to[1], "-", to[2], "-", to[3])), "month")
     tsw_date <- gsub("-","",substr(ts_date, 1, 7))
