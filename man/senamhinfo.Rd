@@ -9,7 +9,7 @@ senamhinfo(x, stations)
 \arguments{
 \item{x}{a vector from SENAMHI stations code}
 
-\item{stations}{data of SENAMHI web scraping}
+\item{stations}{stations information of SENAMHI web scraping}
 }
 \description{
 function for get information (coordinates, station code and altitude) about stations.

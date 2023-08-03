@@ -9,7 +9,7 @@ senamhiws(x, stations)
 \arguments{
 \item{x}{a vector from SENAMHI stations code}
 
-\item{stations}{data of SENAMHI web scraping}
+\item{stations}{stations information of SENAMHI web scraping}
 }
 \description{
 function for get record of SENAMHI stations from 01-01-2016 to 31-12-2022 and
