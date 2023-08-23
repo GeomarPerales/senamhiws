@@ -1,10 +1,11 @@
-#' function for get records of SENAMHI stations
+#' function for get records of SENAMHI stations  in a specific folder.
 #'
 #' function for get record of SENAMHI stations from 01-01-2016 to 31-12-2022 and
-#' save data files and save dataset files in work directory.
+#' save data files and save dataset files in a specific folder.
 #'
 #' @param x a vector from SENAMHI stations code
 #' @param stations stations information of SENAMHI web scraping
+#' @param dir folder to save SENAMHI records
 #'
 #' @import rvest
 #' @import openxlsx
@@ -15,14 +16,17 @@
 #'
 #' x <- c("114123", "114030")
 #' stations <- stations()
-#' senamhiws(x, stations)
+#' senamhiwsdir(x, stations, dir = "senamhi")
 #'
 #' @author Geomar Perales Apaico
 #'
-#' @name senamhiws
+#' @name senamhiwsdir
 
 
-senamhiws <- function(x, stations) {
+senamhiwsdir <- function(x, stations, dir = "senamhi") {
+  dir = dir
+  dir.create(dir, showWarnings = FALSE)
+
   cod_stn <- list()
   read_snm <- list()
   scraping_web_senamhi <- list()
@@ -73,7 +77,8 @@ senamhiws <- function(x, stations) {
 
     }
     df_history_senamhi[[i]] <- do.call("rbind", data_df_history_senamhi)
-    write.xlsx(df_history_senamhi[[i]], paste0(cod_stn[[i]], "_", as.character(df_idx_stn$estacion),".xlsx"))
+    write.xlsx(df_history_senamhi[[i]],
+               paste0(dir, "/", cod_stn[[i]], "_",as.character(df_idx_stn$estacion),".xlsx"))
   }
   return(df_history_senamhi)
 }
