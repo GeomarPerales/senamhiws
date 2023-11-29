@@ -4,12 +4,16 @@
 \alias{senamhiwsdir}
 \title{function for get records of SENAMHI stations  in a specific folder.}
 \usage{
-senamhiwsdir(x, stations, dir = "senamhi")
+senamhiwsdir(x, stations, from = NULL, to = NULL, dir = "senamhi")
 }
 \arguments{
 \item{x}{a vector from SENAMHI stations code}
 
 \item{stations}{stations information of SENAMHI web scraping}
+
+\item{from}{a vector of date begin}
+
+\item{to}{a vector of date end}
 
 \item{dir}{folder to save SENAMHI records}
 }

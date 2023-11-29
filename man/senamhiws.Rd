@@ -4,12 +4,16 @@
 \alias{senamhiws}
 \title{function for get records of SENAMHI stations}
 \usage{
-senamhiws(x, stations)
+senamhiws(x, stations, from = NULL, to = NULL)
 }
 \arguments{
 \item{x}{a vector from SENAMHI stations code}
 
 \item{stations}{stations information of SENAMHI web scraping}
+
+\item{from}{a vector of date begin}
+
+\item{to}{a vector of date end}
 }
 \description{
 function for get record of SENAMHI stations from 01-01-2016 to 31-12-2022 and
