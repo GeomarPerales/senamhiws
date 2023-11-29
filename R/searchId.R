@@ -18,6 +18,20 @@
 #' @name searchId
 
 searchId <- function(x, stations) {
+  if(is.null(x)){
+    return(print("codigo no definido"))
+
+  } else if(is.numeric(x)){
+    x <- as.character(x)
+
+  } else if(is.character(x)){
+    x <- x
+
+  } else if(is.na(x)){
+    return(print("codigo no definido"))
+
+  }
+
   for (i in 1:length(x)) {
     cod_stn <- list()
     cod_stn[[i]] <- x[i]
@@ -25,4 +39,5 @@ searchId <- function(x, stations) {
     df_idx_stn <- data.frame(stations[idx.cod,], stringsAsFactors = FALSE)
   }
   return(df_idx_stn)
+  print("desarrollado por Hydroprime")
 }

@@ -18,6 +18,17 @@
 #' @name searchname
 
 searchname <- function(x, stations) {
+  if(is.null(x)){
+    return(print("nombre no definido"))
+
+  } else if(is.numeric(x)){
+    return(print("nombre no definido"))
+
+  } else if(is.character(x)){
+    x <- x
+
+  }
+
   for (i in 1:length(x)) {
     name_stn <- list()
     name_stn[[i]] <- x[i]
@@ -25,4 +36,5 @@ searchname <- function(x, stations) {
     df_name_stn <- data.frame(stations[idx.name,], stringsAsFactors = FALSE)
   }
   return(df_name_stn)
+  print("desarrollado por Hydroprime")
 }

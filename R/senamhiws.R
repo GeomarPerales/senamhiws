@@ -5,6 +5,8 @@
 #'
 #' @param x a vector from SENAMHI stations code
 #' @param stations stations information of SENAMHI web scraping
+#' @param from a vector of date begin
+#' @param to a vector of date end
 #'
 #' @import rvest
 #' @import openxlsx
@@ -22,7 +24,21 @@
 #' @name senamhiws
 
 
-senamhiws <- function(x, stations) {
+senamhiws <- function(x, stations, from = NULL, to = NULL) {
+  if(is.null(x)){
+    return(print("codigo no definido"))
+
+  } else if(is.numeric(x)){
+    x <- as.character(x)
+
+  } else if(is.character(x)){
+    x <- x
+
+  } else if(is.na(x)){
+    return(print("codigo no definido"))
+
+  }
+
   cod_stn <- list()
   read_snm <- list()
   scraping_web_senamhi <- list()
@@ -30,6 +46,22 @@ senamhiws <- function(x, stations) {
   data_df_history_senamhi <- list()
   data_stn_senamhi <- list()
   df_history_senamhi <- list()
+
+  if(is.null(from) & is.null(to)){
+    from <- c(2016, 01, 01)
+    to <- c(2023, 12, 31)
+
+  } else if(is.null(from) & !is.null(to)){
+    from <- c(2016, 01, 01)
+    to <- to
+
+  } else if(!is.null(from) & is.null(to)){
+    from <- from
+    to <- c(2023, 12, 31)
+  } else if(!is.null(from) & !is.null(to)){
+    from <- from
+    to <- to
+  }
 
   for (i in 1:length(x)) {
     cod_stn[[i]] <- x[i]
@@ -76,5 +108,6 @@ senamhiws <- function(x, stations) {
     write.xlsx(df_history_senamhi[[i]], paste0(cod_stn[[i]], "_", as.character(df_idx_stn$estacion),".xlsx"))
   }
   return(df_history_senamhi)
+  print("desarrollado por Hydroprime")
 }
 

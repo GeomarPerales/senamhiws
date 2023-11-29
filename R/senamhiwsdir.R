@@ -6,6 +6,8 @@
 #' @param x a vector from SENAMHI stations code
 #' @param stations stations information of SENAMHI web scraping
 #' @param dir folder to save SENAMHI records
+#' @param from a vector of date begin
+#' @param to a vector of date end
 #'
 #' @import rvest
 #' @import openxlsx
@@ -23,9 +25,23 @@
 #' @name senamhiwsdir
 
 
-senamhiwsdir <- function(x, stations, dir = "senamhi") {
+senamhiwsdir <- function(x, stations, from = NULL, to = NULL, dir = "senamhi") {
   dir = dir
   dir.create(dir, showWarnings = FALSE)
+
+  if(is.null(x)){
+    return(print("codigo no definido"))
+
+  } else if(is.numeric(x)){
+    x <- as.character(x)
+
+  } else if(is.character(x)){
+    x <- x
+
+  } else if(is.na(x)){
+    return(print("codigo no definido"))
+
+  }
 
   cod_stn <- list()
   read_snm <- list()
@@ -34,6 +50,22 @@ senamhiwsdir <- function(x, stations, dir = "senamhi") {
   data_df_history_senamhi <- list()
   data_stn_senamhi <- list()
   df_history_senamhi <- list()
+
+  if(is.null(from) & is.null(to)){
+    from <- c(2016, 01, 01)
+    to <- c(2023, 12, 31)
+
+  } else if(is.null(from) & !is.null(to)){
+    from <- c(2016, 01, 01)
+    to <- to
+
+  } else if(!is.null(from) & is.null(to)){
+    from <- from
+    to <- c(2023, 12, 31)
+  } else if(!is.null(from) & !is.null(to)){
+    from <- from
+    to <- to
+  }
 
   for (i in 1:length(x)) {
     cod_stn[[i]] <- x[i]
@@ -81,5 +113,6 @@ senamhiwsdir <- function(x, stations, dir = "senamhi") {
                paste0(dir, "/", cod_stn[[i]], "_",as.character(df_idx_stn$estacion),".xlsx"))
   }
   return(df_history_senamhi)
+  print("desarrollado por Hydroprime")
 }
 

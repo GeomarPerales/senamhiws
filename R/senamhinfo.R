@@ -20,6 +20,20 @@
 #' @name senamhinfo
 
 senamhinfo <- function(x, stations) {
+  if(is.null(x)){
+    return(print("codigo no definido"))
+
+  } else if(is.numeric(x)){
+    x <- as.character(x)
+
+  } else if(is.character(x)){
+    x <- x
+
+  } else if(is.na(x)){
+    return(print("codigo no definido"))
+
+  }
+
   cod_stn <- list()
   read_snm <- list()
   df_idx_stn <- list()
@@ -60,4 +74,5 @@ senamhinfo <- function(x, stations) {
   }
   data_stn_senamhi <- do.call("rbind", df_idx_stn)
   return(data_stn_senamhi)
+  print("desarrollado por Hydroprime")
 }
